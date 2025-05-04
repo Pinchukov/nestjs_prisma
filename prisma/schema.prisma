@@ -9,10 +9,6 @@ datasource db {
   shadowDatabaseUrl = env("SHADOW_DATABASE_URL")
 }
 
-// https://github.com/prisma/prisma-examples/blob/latest/orm/nest/prisma/schema.prisma
-
-// https://www.youtube.com/watch?v=TbAXNXM2ZVM
-
 model User {
   id        Int      @id @default(autoincrement())
   createdAt DateTime @default(now())
@@ -37,12 +33,3 @@ model Post {
 
   @@map("post")
 }
-
-// npx prisma db push  - пушим наши таблицы в БД
-
-// npx prisma migrate dev --name add_createdAt_and_updatedAt_to_Post
-
-// https://www.youtube.com/watch?v=tyCwTTcWcYE !!!!
-
-// https://github.com/prisma/blog-backend-rest-api-nestjs-prisma/tree/main - Хороший пример как все устроено. 
-// По запросу "https://github.com/search?q=prisma+nestjs&type=repositories"
